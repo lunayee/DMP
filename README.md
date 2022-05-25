@@ -96,5 +96,3 @@
     docker-compose up
     ```
     
-
-pip freeze > requirements.txt
