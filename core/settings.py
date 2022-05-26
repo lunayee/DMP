@@ -86,7 +86,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'SENSOR',
+        'NAME': 'config',
         'USER': 'root',
         'PASSWORD': '123456789',
         'HOST': 'db',
