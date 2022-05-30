@@ -4,7 +4,7 @@ import datetime
 
 def connected_mysql(DBNAME):##connected_mysql("SENSOR")
     
-    db_database = MySQLdb.connect(host="172.21.0.2",user ="root",passwd="123456789",db = DBNAME,charset='utf8')
+    db_database = MySQLdb.connect(host="172.23.0.2",user ="root",passwd="123456789",db = DBNAME,charset='utf8')
     c_database = db_database.cursor()
     return db_database,c_database
     
