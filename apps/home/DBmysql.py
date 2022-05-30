@@ -3,12 +3,11 @@ import datetime
 
 
 def connected_mysql(DBNAME):##connected_mysql("SENSOR")
-    try:
-        db_database = MySQLdb.connect(host="localhost",user ="root",passwd="123456789",db = DBNAME,charset='utf8')
-        c_database = db_database.cursor()
-        return db_database,c_database
-    except:
-        print("[!CANNOT CONNECT MySQL!]")
+    
+    db_database = MySQLdb.connect(host="172.21.0.2",user ="root",passwd="123456789",db = DBNAME,charset='utf8')
+    c_database = db_database.cursor()
+    return db_database,c_database
+    
 
 def read_mysql(DBNAME,SQL):##read_mysql("SENSOR","select * from `T01`")
     db,c=connected_mysql(DBNAME)

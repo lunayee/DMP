@@ -143,11 +143,12 @@ def GetDashboard(request):
     isshowid=[]
     for i in Re_Value:
         if i[12] == 'True' :
-            isshowid.append(i[0]-1)
+            isshowid.append(i[0]-14)
+    print(isshowid)
 
     for i in isshowid:
-        #Data.append({"Date_Time":GetData[1],"ProjID":str(GetData[2]),"STID":str(GetData[3]),"Item":str(Re_Value[i][11]),"Value_be":str(round(GetData[i+4],2)),"Value_af":str(round(GetData[i+17],2)),"a":str(round(Re_Value[i][6],3)),"b":str(round(Re_Value[i][7],3)),"offset":str(Re_Value[i][8]),"isshow":Re_Value[i][12]})
-        Data.append({"Date_Time":GetData[1],"ProjID":str(GetData[2]),"STID":str(GetData[3]),"Item":str(Re_Value[i][11]),"Value_be":str(GetData[i+4]),"Value_af":str(GetData[i+17]),"a":str(Re_Value[i][6]),"b":str(Re_Value[i][7]),"offset":str(Re_Value[i][8]),"isshow":Re_Value[i][12]})
+        Data.append({"Date_Time":GetData[1],"ProjID":str(GetData[2]),"STID":str(GetData[3]),"Item":str(Re_Value[i][11]),"Value_be":str(round(GetData[i+4],2)),"Value_af":str(round(GetData[i+17],2)),"a":str(round(Re_Value[i][6],3)),"b":str(round(Re_Value[i][7],3)),"offset":str(Re_Value[i][8]),"isshow":Re_Value[i][12]})
+        #Data.append({"Date_Time":GetData[1],"ProjID":str(GetData[2]),"STID":str(GetData[3]),"Item":str(Re_Value[i][11]),"Value_be":str(GetData[i+4]),"Value_af":str(GetData[i+17]),"a":str(Re_Value[i][6]),"b":str(Re_Value[i][7]),"offset":str(Re_Value[i][8]),"isshow":Re_Value[i][12]})
 
     context={"Data":Data}
     print(round(GetData[5],2))
